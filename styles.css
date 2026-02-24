@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* --- BARRA SUPERIOR --- */
+.top-bar {
+    background: #ffd000;
+    padding: 8px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between; /* Alinea contacto a la izquierda y redes a la derecha */
+    align-items: center;
+}
+
+.social-top {
+    display: flex;
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.social-top a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px; /* Tamaño de los iconos de redes */
+    transition: all 0.3s ease;
+}
+
+.social-top a:hover {
+    color: #0c3586;
+    transform: scale(1.2);
+}
+
+/* --- HEADER --- */
+.header-total {
+    background: #ffffff;
+    width: 100%;
+    padding: 15px 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-img {
+    height: 95px;
+    width: auto;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: 800;
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+/* --- BOTONES NAVEGACIÓN --- */
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    background: linear-gradient(145deg, #ffd000, #f0c400);
+    padding: 25px 40px;
+    border-radius: 50px; 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav a:hover, .nav a.active {
+    background: #0c3586;
+    color: #fff;
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(12, 53, 134, 0.3);
+}
+
+/* --- HERO (Slider Principal) --- */
+.hero {
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: slide-hero 50s infinite linear; 
+}
+
+.slide { width: 20%; height: 100%; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 2;
+}
+
+@keyframes slide-hero {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-80%); }
+}
+
+/* --- HERO PÁGINAS INTERNAS --- */
+.proyectos-hero {
+    height: 65vh;
+    background: linear-gradient(to right, 
+                rgba(12, 53, 134, 1) 0%, 
+                rgba(12, 53, 134, 0.8) 40%, 
+                rgba(12, 53, 134, 0) 90%), 
+                url('Imagenes/WhatsApp Image 2026-02-22 at 10.05.29 PM.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: white;
+}
+
+.proyectos-hero-content {
+    max-width: 700px;
+}
+
+.proyectos-hero-content span {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.proyectos-hero-content h1 {
+    font-size: 5.5rem;
+    font-weight: 900;
+    margin: 15px 0;
+    line-height: 0.9;
+}
+
+.proyectos-hero-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    border-left: 4px solid #ffd000;
+    padding-left: 20px;
+}
+
+/* --- SECCIÓN CONÓCENOS DETALLE --- */
+.conocenos-detalle {
+    padding: 80px 10%;
+    background: #fff;
+}
+
+.conocenos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.texto-detalle .tagline {
+    color: #0c3586;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.texto-detalle h2 {
+    font-size: 2.8rem;
+    color: #0c3586;
+    margin: 10px 0 25px 0;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.texto-detalle p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.imagen-detalle img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- SECCIÓN AZUL (MISIÓN, VISIÓN, VALORES) --- */
+.mision-valores {
+    background: #0c3586;
+    color: white;
+    padding: 80px 10%;
+}
+
+.mision-valores-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.mision-box h3, .valores-box h3, .info-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 800;
+    border-bottom: 3px solid #ffd000; 
+    display: inline-block;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.mision-box p, .valores-box p, .info-box p, .lista-valores li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.lista-valores {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-valores li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* --- SECCIÓN SERVICIOS --- */
+.servicios-container {
+    background-color: #f4f7f6; 
+    padding: 80px 10%;
+}
+
+.servicios-header-text h2 {
+    text-align: left;
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.servicios-grid-moderno {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-servicio {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-bottom: 5px solid transparent;
+}
+
+.card-servicio:hover {
+    transform: translateY(-10px);
+    border-bottom: 5px solid #ffd000; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* --- ICONOS Y TEXTO SERVICIOS --- */
+.icon-box {
+    font-size: 45px;
+    color: #0c3586;
+    margin-bottom: 25px;
+}
+
+.card-servicio h3 {
+    font-size: 1.6rem;
+    color: #0c3586;
+    margin-bottom: 5px; 
+    font-weight: 700;
+}
+
+.subtitulo {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.card-servicio p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* --- GALERÍA PROYECTOS --- */
+.proyectos-galeria-container {
+    background: #f9f9f9;
+    padding: 80px 20px;
+}
+
+.titulo-galeria {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.item-galeria {
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: 0.4s;
+}
+
+.item-galeria:hover { transform: translateY(-15px); }
+
+.img-container { width: 100%; height: 300px; overflow: hidden; }
+.img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
+.item-galeria:hover img { transform: scale(1.15); }
+
+.item-info { padding: 25px; border-top: 5px solid #ffd000; }
+.item-info h3 { color: #0c3586; font-size: 1.5rem; margin-bottom: 10px; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .conocenos-grid {
+        grid-template-columns: 1fr;
+    }
+    .mision-valores-container {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+        text-align: center;
+    }
+}
